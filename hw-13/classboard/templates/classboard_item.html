@@ -1,0 +1,25 @@
+{% extends 'layout/base.html' %}
+
+
+{% block title %}
+    Предмет
+{% endblock title %}
+    
+
+{% block content %}
+
+<h2>{{ classboard_current.class_name }}</h2>
+
+{{ teachers.get_teacher_display }}
+
+{% for teacher in teachers.all %}
+    <p>{{ teacher }}</p>
+
+
+{% endfor %}
+    
+<p>
+    <a class="btn btn-primary" href="{% url 'classboard_view' %}"> Обратно </a>
+</p>
+
+{% endblock content %}

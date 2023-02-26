@@ -1,0 +1,7 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<h1>{{ current_teacher.teacher.first_name }} {{ current_teacher.teacher.last_name }}</h1>
+<p>Номер Телефона: {{ current_teacher.teacher.phone }}</p>
+<p>почта: {{ current_teacher.teacher.email }}</p>
+{% endblock content %}
